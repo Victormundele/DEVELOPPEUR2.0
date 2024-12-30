@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Loading</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #000428, #004e92);
+            color: white;
+            overflow: hidden; /* Empêche le scroll */
+        }
+
+        .container {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .welcome-text {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 20px;
+            color: yellow; /* Texte jaune pour la bienvenue */
+        }
+
+        .loading-circle {
+            width: 80px;
+            height: 80px;
+            border: 10px solid white;
+            border-top: 10px solid transparent;
+            border-radius: 50%;
+            animation: spin 2s linear infinite;
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .scrolling-text {
+            position: absolute;
+            bottom: -100%; /* Texte démarre en dehors de l'écran */
+            width: 100%;
+            text-align: center;
+            font-size: 1.5rem;
+            line-height: 2rem;
+            animation: scroll-up 20s linear infinite; /* Animation étendue à 20s */
+        }
+
+        @keyframes scroll-up {
+            from {
+                bottom: -100%;
+            }
+            to {
+                bottom: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="welcome-text">Bienvenue à la page Loading</div>
+        <div class="loading-circle"></div>
+        <div class="scrolling-text">
+            <p>Développeur 2.0 Victor</p>
+            <p>Bienvenue sur notre page dédiée au professionnalisme et à l'innovation.</p>
+            <p>Explorez nos projets :</p>
+            <p><strong>1. Site E-commerce :</strong> Apprenez à créer des plateformes pour vendre des produits en ligne.</p>
+            <p><strong>2. Blog Personnel :</strong> Découvrez comment partager des articles et gérer un site de blog.</p>
+            <p><strong>3. Portefeuille de Projets :</strong> Présentez vos réalisations professionnelles en ligne.</p>
+            <p><strong>4. Plateforme d'Éducation :</strong> Apprenez à développer des sites pour partager des cours en ligne.</p>
+            <p><strong>5. Application Web Dynamique :</strong> Conception d'applications interactives pour des besoins spécifiques.</p>
+            <p>Langages utilisés : HTML, CSS, JavaScript, PHP, et bien plus.</p>
+            <p>Merci de visiter notre site. Nous vous souhaitons une expérience enrichissante.</p>
+        </div>
+    </div>
+</body>
+</html>

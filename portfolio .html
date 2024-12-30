@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #0b0f27;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background: #0b0f27;
+            position: sticky;
+            top: 0;
+        }
+
+        nav h2 {
+            font-size: 28px;
+            color: white;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ff4081;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 50px;
+            flex-wrap: wrap;
+        }
+
+        .text-section {
+            flex: 1;
+            margin-right: 50px;
+        }
+
+        .text-section h1 {
+            font-size: 60px;
+            margin-bottom: 10px;
+        }
+
+        .text-section p {
+            font-size: 18px;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            color: white;
+            font-size: 20px;
+            text-decoration: none;
+            transition: transform 0.3s;
+        }
+
+        .social-icons a:hover {
+            transform: scale(1.2);
+            color: #ff4081;
+        }
+
+        .hire-btn {
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            background: linear-gradient(to right, #ff4081, #4a90e2);
+            color: white;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .hire-btn:hover {
+            transform: scale(1.1);
+        }
+
+        .image-section {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image-section img {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            border: 5px solid transparent;
+            background: linear-gradient(to right, #ff4081, #4a90e2);
+            padding: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .text-section {
+                margin-right: 0;
+            }
+
+            .text-section h1 {
+                font-size: 40px;
+            }
+
+            .text-section p {
+                font-size: 16px;
+            }
+
+            .image-section img {
+                width: 250px;
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <h2>Portfolio</h2>
+        <ul>
+            <li><a href="3.html">Home</a></li>
+            <li><a href="à-propos.html">About</a></li>
+            <li><a href="Loading2.html">Skills</a></li>
+            <li><a href="portfolio .html">Portfolio</a></li>
+            <li><a href="tel: +243 828900242">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="text-section">
+            <h1>Hi, I'm victor TI 2.0</h1>
+            <p>Frontend Developer</p>
+            <p>Web DESIGN<div class="social-icons">
+                <a href="https://facebook.com/ministrevickymundele" target="_blank"><img src="https://www.svgrepo.com/show/157806/facebook.svg" alt="Facebook" style="width: 40px;"></a>
+                <a href="https://facebook.com/ministrevickymundele" target="_blank"><img src="https://www.svgrepo.com/show/157806/x.svg" alt="Tweeter" style="width: 40px;"></a>
+                <a href="https://linkedin.com/ministrevickymundele" target="_blank"><img src="https://www.svgrepo.com/show/157806/linkedin.svg" alt="LinkedIn" style="width: 40px;"></a>
+            </div>
+            <a href="voir mon parcours.html"><button class="hire-btn">Hire Me</button></a>
+        </div>
+        <div class="image-section">
+            <img src="GRAPI.png" alt="Profile Picture">
+        </div>
+    </div>
+</body>
+</html>

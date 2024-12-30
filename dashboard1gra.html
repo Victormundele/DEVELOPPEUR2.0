@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau de bord</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .navbar {
+            background-color: #0078d7;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        .navbar h1 {
+            margin: 0;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .dashboard-header {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .dashboard-card {
+            background-color: white;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .dashboard-card h2 {
+            margin: 0;
+            font-size: 1.5rem;
+            color: #0078d7;
+        }
+
+        .dashboard-card p {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .button {
+            background-color: #0078d7;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1rem;
+            cursor: pointer;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        .button:hover {
+            background-color: #005bb5;
+        }
+
+        .logout-button {
+            background-color: #f44336;
+            margin-top: 20px;
+            display: inline-block;
+        }
+
+        .logout-button:hover {
+            background-color: #d32f2f;
+        }
+
+        /* Ajout de style pour la section de statistiques */
+        .statistics {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .statistics .stat-card {
+            background-color: #fff;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+            width: 30%;
+            text-align: center;
+        }
+
+        .statistics .stat-card h3 {
+            font-size: 1.5rem;
+            margin: 0;
+            color: #0078d7;
+        }
+
+        .statistics .stat-card p {
+            font-size: 1.2rem;
+            color: #555;
+        }
+
+        /* Style pour les graphiques */
+        .chart-container {
+            width: 100%;
+            height: 400px;
+            margin-bottom: 20px;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <!-- Barre de navigation -->
+    <div class="navbar">
+        <h1>Bienvenue dans STATISTIQUE</h1>
+    </div>
+
+    <!-- Contenu du tableau de bord -->
+    <div class="container">
+        <div class="dashboard-header">
+            <h2>Hello !</h2>
+            <p>Voici le plan.</p>
+        </div>
+
+        <!-- Section des statistiques -->
+        <div class="statistics">
+            <div class="stat-card">
+                <h3>Utilisateurs</h3>
+                <p>245</p>
+            </div>
+            <div class="stat-card">
+                <h3>Connexions Aujourd'hui</h3>
+                <p>78</p>
+            </div>
+            <div class="stat-card">
+                <h3>Notifications</h3>
+                <p>5 nouvelles</p>
+            </div>
+        </div>
+
+        <!-- Graphique à barres -->
+        <div class="chart-container">
+            <canvas id="barChart"></canvas>
+        </div>
+
+        <!-- Graphique circulaire -->
+        <div class="chart-container">
+            <canvas id="pieChart"></canvas>
+        </div>
+
+        <!-- Carte d'information 1 -->
+        <div class="dashboard-card">
+            <h2>Dernières activités</h2>
+            <p>Aucune nouvelle activité pour le moment.</p>
+        </div>
+
+        <!-- Carte d'information 2 -->
+        <div class="dashboard-card">
+            <h2>Notifications</h2>
+            <p>Pas de notifications récentes.</p>
+        </div>
+
+        <!-- Bouton pour déconnexion -->
+        <a href="index.html" class="button logout-button">Se déconnecter</a>
+    </div>
+
+    <script>
+        // Graphique à barres
+        const ctxBar = document.getElementById('barChart').getContext('2d');
+        const barChart = new Chart(ctxBar, {
+            type: 'bar',
+            data: {
+                labels: ['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi'],
+                datasets: [{
+                    label: 'Nombre de Connexions',
+                    data: [12, 19, 3, 5, 2],
+                    backgroundColor: 'rgba(0, 120, 215, 0.5)',
+                    borderColor: '#0078d7',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        // Graphique circulaire
+        const ctxPie = document.getElementById('pieChart').getContext('2d');
+        const pieChart = new Chart(ctxPie, {
+            type: 'pie',
+            data: {
+                labels: ['Utilisateurs Actifs', 'Utilisateurs Inactifs'],
+                datasets: [{
+                    data: [65, 35],
+                    backgroundColor: ['#0078d7', '#cccccc'],
+                    borderColor: ['#ffffff', '#ffffff'],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true
+            }
+        });
+    </script>
+</body>
+</html>

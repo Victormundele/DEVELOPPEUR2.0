@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Se connecté</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #141e30, #243b55);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-container {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px 30px;
+            border-radius: 10px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .login-container h1 {
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            color: yellow;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 1rem;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            font-size: 1rem;
+        }
+
+        .form-group input:focus {
+            outline: 2px solid yellow;
+        }
+
+        .error-message {
+            color: red;
+            font-size: 0.9rem;
+            margin-top: 5px;
+            display: none;
+        }
+
+        .login-button {
+            background: #0078d7;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .login-button:hover {
+            background: #005bb5;
+        }
+
+        .back-button {
+            margin-top: 15px;
+            display: block;
+            text-decoration: none;
+            color: yellow;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h1>Connexion</h1>
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="username">Nom d'utilisateur</label>
+                <input type="text" id="username" name="username" placeholder="Entrez votre nom d'utilisateur" required>
+                <div class="error-message" id="usernameError">Veuillez entrer un nom d'utilisateur.</div>
+            </div>
+            <div class="form-group">
+                <label for="password">Mot de passe</label>
+                <input type="password" id="password" name="password" placeholder="Entrez votre mot de passe" required>
+                <div class="error-message" id="passwordError">Veuillez entrer un mot de passe.</div>
+            </div>
+            <button type="submit" class="login-button">Se connecter</button>
+        </form>
+        <a href="3.html" class="back-button">Retour</a>
+    </div>
+
+    <script>
+        // Validation des champs du formulaire
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            let isValid = true;
+
+            // Vérifie le champ du nom d'utilisateur
+            const username = document.getElementById('username');
+            const usernameError = document.getElementById('usernameError');
+            if (username.value.trim() === '') {
+                usernameError.style.display = 'block';
+                isValid = false;
+            } else {
+                usernameError.style.display = 'none';
+            }
+
+            // Vérifie le champ du mot de passe
+            const password = document.getElementById('password');
+            const passwordError = document.getElementById('passwordError');
+            if (password.value.trim() === '') {
+                passwordError.style.display = 'block';
+                isValid = false;
+            } else {
+                passwordError.style.display = 'none';
+            }
+
+            // Empêche l'envoi du formulaire si des champs sont vides
+            if (!isValid) {
+                event.preventDefault();
+            }
+        });
+    </script>
+</body>
+</html>

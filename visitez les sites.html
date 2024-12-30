@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visiter les Sites - Développeur 2.0</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #001f3f; /* Bleu marin */
+            color: #fff;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            background-color: #003366;
+        }
+        header h1 {
+            font-size: 32px;
+            margin: 0;
+        }
+        header a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px 20px;
+            background-color: #00509E;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        header a:hover {
+            background-color: #003366;
+        }
+        .carousel {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .carousel img {
+            width: 300px;
+            height: 200px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .description {
+            text-align: center;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 20px;
+        }
+        .site {
+            width: 48%; /* Pour avoir deux éléments par ligne */
+            margin: 10px 0;
+            background-color: #00264d;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        .site h3 {
+            margin: 0;
+            font-size: 18px;
+        }
+        .site p {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        .site a {
+            color: #ffffff;
+            text-decoration: none;
+            background-color: #00509E;
+            padding: 5px 10px;
+            border-radius: 5px;
+            opacity: 0.6; /* Pour simuler un lien désactivé */
+        }
+        .site a:hover {
+            background-color: #003366;
+        }
+        footer {
+            background-color: #fff;
+            color: #000;
+            text-align: center;
+            padding: 20px;
+        }
+        footer a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #000;
+            font-size: 24px;
+        }
+        footer p {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="3.html">Retour</a>
+        <h1>Développeur 2.0 - Victor</h1>
+    </header>
+
+    <div class="carousel">
+        <img id="carouselImage" src="e6bc29ade3069c5af29c90fb649cafe8.jpg" alt="Carousel">
+        <img id="carouselImage" src="61fcae75ecfe0fe416840134e8240303.jpg" alt="Carousel">
+    </div>
+
+    <div class="description">
+        <p>Visiter les différents sites web élaborés par Développeur 2.0</p>
+    </div>
+
+    <div class="container">
+        <!-- Site 1 (gauche) -->
+        <div class="site">
+            <h3>Site 1 : E-commerce</h3>
+            <p>Ce site offre une plateforme e-commerce moderne pour acheter et vendre des produits dans divers domaines tels que l'électronique, la mode, et bien plus encore. Il propose également des systèmes de paiement sécurisés et une interface utilisateur facile à utiliser.</p>
+            <a href="#" onclick="return false;">Visiter</a>
+        </div>
+
+        <!-- Site 2 (droite) -->
+        <div class="site">
+            <h3>Site 2 : Blog personnel</h3>
+            <p>Ce blog personnel permet de partager des réflexions, des idées, et des conseils sur divers sujets comme le développement, la vie personnelle et la technologie. Un espace interactif où les visiteurs peuvent laisser des commentaires et participer aux discussions.</p>
+            <a href="#" onclick="return false;">Visiter</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Site 3 (gauche, bas) -->
+        <div class="site">
+            <h3>Site 3 : Portfolio</h3>
+            <p>Un portfolio en ligne présentant les travaux et projets réalisés dans divers domaines, y compris le développement web, la création graphique, et la gestion de projets. Ce site permet de démontrer les compétences de manière professionnelle.</p>
+            <a href="#" onclick="return false;">Visiter</a>
+        </div>
+
+        <!-- Site 4 (droite, bas) -->
+        <div class="site">
+            <h3>Site 4 : Réseaux sociaux</h3>
+            <p>Un site de réseaux sociaux permettant de connecter les utilisateurs, de partager des photos, vidéos et publications, tout en interagissant avec d'autres membres par des commentaires, likes, et messages privés.</p>
+            <a href="#" onclick="return false;">Visiter</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Site 5 (gauche) -->
+        <div class="site">
+            <h3>Site 5 : Éducation</h3>
+            <p>Une plateforme éducative en ligne permettant aux utilisateurs d'accéder à des cours, des tutoriels et des vidéos éducatives sur divers sujets allant des mathématiques aux sciences sociales.</p>
+            <a href="#" onclick="return false;">Visiter</a>
+        </div>
+
+        <!-- Site 6 (droite) -->
+        <div class="site">
+            <h3>Site 6 : Actualités</h3>
+            <p>Un site d'actualités en ligne pour suivre les derniers événements mondiaux, y compris des articles sur la politique, la culture, la technologie, et les tendances économiques.</p>
+            <a href="#" onclick="return false;">Visiter</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Site 7 (gauche, bas) -->
+        <div class="site">
+            <h3>Site 7 : Santé</h3>
+            <p>Le site santé fournit des conseils sur la nutrition, le fitness, la médecine et les soins préventifs, tout en offrant une communauté pour discuter de la santé et du bien-être.</p>
+            <a href="#" onclick="return false;">Visiter</a>
+        </div>
+
+        <!-- Site 8 (droite, bas) -->
+        <div class="site">
+            <h3>Site 8 : Voyage</h3>
+            <p>Explorez le monde grâce à ce site dédié aux voyages, proposant des informations sur des destinations populaires, des guides pratiques et des options pour réserver des billets d'avion et des hôtels.</p>
+            <a href="#" onclick="return false;">Visiter</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Site 9 (gauche) -->
+        <div class="site">
+            <h3>Site 9 : Cuisine</h3>
+            <p>Des recettes, des astuces culinaires, et des vidéos pour apprendre à cuisiner des plats du monde entier. Ce site est dédié à ceux qui aiment la cuisine et l'art culinaire.</p>
+            <a href="#" onclick="return false;">Visiter</a>
+        </div>
+
+        <!-- Site 10 (droite) -->
+        <div class="site">
+            <h3>Site 10 : Divertissement</h3>
+            <p>Ce site vous propose une gamme d'options de divertissement, y compris des films, des séries, de la musique et des jeux vidéo. L'endroit idéal pour se détendre et se divertir en ligne.</p>
+            <a href="#" onclick="return false;">Visiter</a>
+        </div>
+    </div>
+
+    <footer>
+        <a href="https://facebook.com/ministrevickymundele" target="_blank"><img src="https://www.svgrepo.com/show/157806/facebook.svg" alt="Facebook" style="width: 40px;"></a>
+        <a href="https://linkedin.com/ministrevickymundele" target="_blank"><img src="https://www.svgrepo.com/show/157806/linkedin.svg" alt="LinkedIn" style="width: 40px;"></a>
+        <a href="mailto:victorti.cd.@gmail.com"><img src="https://www.svgrepo.com/show/157806/gmail-icon.svg" alt="Gmail" style="width: 40px;"></a>
+        <a href="https://instagram.com/ministrevickymundele" target="_blank"><img src="https://www.svgrepo.com/show/157806/instagram.svg" alt="Instagram" style="width: 40px;"></a>
+        <a href="https://youtube.com/chanel/ministrevickymundele" target="_blank"><img src="https://www.svgrepo.com/show/157806/youtube.svg" alt="YouTube" style="width: 40px;"></a>
+        <a href="https://tiktok.com/vickymundele.fr" target="_blank"><img src="https://www.svgrepo.com/show/157806/tiktok.svg" alt="TikTok" style="width: 40px;"></a>
+        <p>Powered by Développeur 2.0 - Victor</p>
+    </footer>

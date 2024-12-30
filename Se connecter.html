@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Se connecté</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #1f4037, #99f2c8);
+            color: white;
+            overflow: hidden;
+        }
+
+        .loading-container {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .loading-text {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: yellow;
+        }
+
+        .loading-circle {
+            width: 80px;
+            height: 80px;
+            border: 10px solid white;
+            border-top: 10px solid transparent;
+            border-radius: 50%;
+            animation: spin 2s linear infinite;
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .connected-container {
+            display: none; /* Caché initialement */
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .connected-text {
+            font-size: 2rem;
+            color: white;
+        }
+
+        .button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #0078d7;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            background: #005bb5;
+        }
+    </style>
+</head>
+<body>
+    <!-- Conteneur de chargement -->
+    <div class="loading-container" id="loading">
+        <div class="loading-text">Chargement en cours...</div>
+        <div class="loading-circle"></div>
+    </div>
+
+    <!-- Conteneur principal de connexion -->
+    <div class="connected-container" id="connected">
+        <div class="connected-text">Bienvenue sur la page "Se connecté"</div>
+        <a href="login.html" class="button">Se connecter</a><p></p>
+        <a href="dashboard1gra.html" class="button">Statistiques</a>
+    </div>
+
+    <script>
+        // Affiche le chargement pendant 5 secondes, puis montre le contenu
+        setTimeout(() => {
+            document.getElementById('loading').style.display = 'none';
+            document.getElementById('connected').style.display = 'flex';
+        }, 5000);
+    </script>
+</body>
+</html>
